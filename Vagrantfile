@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     # copying out to the VM
     # addusers.sql is a script file used to add the needed users to the MySQL database
     config.vm.provision "file", source: "addusers.sql", destination: "addusers.sql"
-    #config.vm.provision "file", source: "50-server.cnf", destination: "50-server.cnf"
+    config.vm.provision "file", source: "50-server.cnf", destination: "50-server.cnf"
   
     # Now configure the database
     # These commands will install the MariaDB distribution of MySQL
